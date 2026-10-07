@@ -1,0 +1,26 @@
+[
+    {
+        "id": "1",
+        "titulo": "Estudar matemática",
+        "descricao": "Integral e derivada",
+        "data_entrega": "30/11/2026",
+        "finalizada": false,
+        "prioridade": "Alta"
+    },
+    {
+        "id": "2",
+        "titulo": "Prova inglês",
+        "descricao": "Do, while, if, else",
+        "data_entrega": "20/10/2026",
+        "finalizada": true,
+        "prioridade": "baixa"
+    },
+    {
+        "id": "3",
+        "titulo": "TCC",
+        "descricao": "TCC da faculdade",
+        "data_entrega": "10/10/2026",
+        "finalizada": false,
+        "prioridade": "Alta"
+    }
+]
