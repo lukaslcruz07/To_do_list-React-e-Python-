@@ -9,11 +9,11 @@
     },
     {
         "id": "2",
-        "titulo": "Prova inglês",
-        "descricao": "Do, while, if, else",
-        "data_entrega": "20/10/2026",
+        "titulo": "Estudar C",
+        "descricao": "Importante por conta da habilidade de Cybersecurity, a futura profissão que quero seguir.",
+        "data_entrega": "12/12/2027",
         "finalizada": true,
-        "prioridade": "baixa"
+        "prioridade": "Alta"
     },
     {
         "id": "3",
@@ -22,5 +22,13 @@
         "data_entrega": "10/10/2026",
         "finalizada": false,
         "prioridade": "Alta"
+    },
+    {
+        "id": "4",
+        "titulo": "Entender Java",
+        "descricao": "Estudar todos os conceitos do java.",
+        "data_entrega": "19/02/2027",
+        "finalizada": false,
+        "prioridade": "Média"
     }
 ]
