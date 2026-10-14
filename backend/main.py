@@ -7,9 +7,9 @@ from fastapi.middleware.cors import CORSMiddleware
 #Classe Tarefa
 class Tarefa(BaseModel):
         titulo: str
-        descricao : str
+        descricao : str 
         data_entrega: str
-        finalizada: bool
+        finalizada: bool = False
         prioridade: str
 
 
