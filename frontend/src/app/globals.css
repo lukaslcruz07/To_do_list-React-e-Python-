@@ -1,1 +1,29 @@
 @import "tailwindcss";
+
+.card-prioridade {
+width: fit-content;
+padding: 4px 12px;
+border-radius: 16px;
+font-size: 12px;
+font-weight: 600;
+}
+
+.prioridade-extrema {
+background-color: #f3e8ff;
+color: #7e22ce;
+}
+
+.prioridade-alta {
+background-color: #fee2e2;
+color: #b91c1c;
+}
+
+.prioridade-media {
+background-color: #ffedd5;
+color: #c2410c;
+}
+
+.prioridade-baixa {
+background-color: #dbeafe;
+color: #1d4ed8;
+}

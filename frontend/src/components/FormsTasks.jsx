@@ -1,9 +1,9 @@
 "use client"
 
-import { useState } from "react"
+import { useRef, useState } from "react"
 import NoteComponent from "./NoteComponent"
 
-const TASKS_CAMINHO = "http://127.0.0.1:8000"
+export const URL_API = "http://127.0.0.1:8000"
 const classeLabel = "mb-2 block text-sm font-medium text-gray-700"
 const classeInputTD = "w-full rounded-lg border border-gray-300 bg-white px-3 py-2.5 text-sm text-gray-800 outline-none transition placeholder:text-gray-400 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
 
@@ -11,6 +11,7 @@ export default function FormsTasks(){
 
     const [form, setForm] = useState({titulo: "", descricao: "", data: "", prioridade: ""})
     const [note, setNote] = useState("")
+    const inputTituloRef = useRef('')
     
     const handleSubmit = async (event) => {
         event.preventDefault()
@@ -27,7 +28,7 @@ export default function FormsTasks(){
             prioridade : form.prioridade
         }
         try{
-            const response = await fetch(`${TASKS_CAMINHO}/tasks`,{
+            const response = await fetch(`${URL_API}/tasks`,{
                 method: "POST",
                 headers: {
                     "Content-Type" : "application/json"
@@ -37,6 +38,7 @@ export default function FormsTasks(){
             if(response.ok){
                 setNote("Tarefa criada com sucesso!")
                 setForm({titulo: "", descricao: "", data: "", prioridade: ""})
+                inputTituloRef.current.focus()
                 return await response.json()
             }
             else{setNote("Erro ao criar a tarefa.")}
@@ -62,6 +64,7 @@ export default function FormsTasks(){
                         value={form.titulo} 
                         placeholder="Título da tarefa"
                         className={classeInputTD}
+                        ref={inputTituloRef}
                         onChange={(e) => 
                             setForm((prev) => 
                                 ({...prev,
